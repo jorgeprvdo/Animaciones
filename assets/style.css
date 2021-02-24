@@ -50,7 +50,6 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 150px;
 }
 
 #WelcomeSection {
@@ -149,7 +148,7 @@ section {
     }
 
     100% {
-        font-size: 500px;
+        font-size: 200px;
         color: transparent;
     }
 }
