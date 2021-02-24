@@ -4,12 +4,152 @@
     box-sizing: border-box;
 }
 
-header {
-    background-color: chocolate;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: hidden;
+}
+
+nav {
+    width: 100%;
+    top: 90%;
+    position: fixed;
+    z-index: 99999;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    width: 300vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    background-color: royalblue;
     color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 150px;
+}
+
+#WelcomeSection {
+    animation: sectionwelcome 2s;
+}
+
+#WelcomeH1-1 {
+    animation: welcomeMessage 4s;
+}
+
+#WelcomeH1-2 {
+    animation: welcomeMessage 6s;
+}
+
+#ring > div {
+    position: absolute;
+}
+
+#colors {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(#b3f542, #409cb8, #b99dbd, #f2ec6d, #b144c9);
+    border-radius: 50%;
+    animation: rotate 1s linear infinite;
+    filter: blur(10px);
+}
+
+#static {
+    width: 350px;
+    height: 350px;
+    background-color: royalblue;
+    border-radius: 50%;
+}
+
+#goodbye h1{
+    font-size: 100px;
+    position: absolute;
+}
+
+#gb1 {
+    animation: goodbye1 1s infinite;
+}
+
+#gb2{
+    animation: goodbye2 2s infinite;
+}
+
+@keyframes sectionwelcome{
+    from{
+        background-color: transparent;
+        height: 0vh;
+    }
+
+    to {
+        background-color: royalblue;
+        height: 100vh;
+    }
+}
+
+@keyframes welcomeMessage {
+    from {
+        display: none;
+    }
+
+    to {
+        display: block;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes goodbye1 {
+    from {
+        font-size: 0px;
+    }
+    to {
+        font-size: 100px;
+    }
+}
+
+@keyframes goodbye2 {
+    0% {
+        font-size: 0px;
+        color: transparent;
+    }
+    40% {
+        font-size: 100px;
+        color: white;
+    }
+
+    100% {
+        font-size: 500px;
+        color: transparent;
+    }
 }
